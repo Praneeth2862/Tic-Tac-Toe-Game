@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:wght@700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Ubuntu',sans-serif;
+}
+body{
+    background: #66e0ff;
+    display: flex;
+    height:100vh;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap:wrap ;
+}
+#start-box{
+    max-width: 420px;
+    width:500px;
+    height:300px;
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    padding:50px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.input-box,.submit-box{
+    width:100%;
+    margin-top: 10px;
+}
+.submit-box{
+    display: grid;
+    place-items: center;
+}
+#start-box h1{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 10px 0px;;
+   
+    text-align: center;
+    font-size: 30px;
+}
+.input-box label{
+    width: 100%;;
+    margin-bottom:10px;
+    font-size: 20px;
+}
+.input-box input{
+    width:100%;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.input-box input::placeholder{
+    font-size: 1.2em;
+}
+.submit-box button{
+    background: grey;
+    font-size: 1em;
+    font-weight: bolder;
+    width:100%;
+    height:35px;
+    border:none;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.submit-box button:hover{
+    background:  #b3f0ff;
+}
+/********************Game-box**************************/
+#game-box{
+    border:1px solid;
+    border-radius: 10px;
+    background: #ccffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width:500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:30px 40px;
+    display:none;
+}
+.players{
+    position: relative;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.display-player1,.display-player2{
+    width:50%;
+    margin: 0px 5px;
+    text-transform: capitalize;
+    z-index: 2;
+    color:black;
+    text-align: center;
+    border:1px;
+    font-size: 2em;
+}
+.activeX{
+    background-color: #ff3333;
+    border-radius: 5px;
+    color:white
+}
+.activeO{
+    background-color: #66e0ff;
+    border-radius: 5px;
+    color:white
+}
+.hide{
+    background:transparent;
+    color:black;
+    border-radius: 5px;
+}
+.grid{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:200px;
+    height:350px;
+}
+.row1,.row2,.row3{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell{
+    border :1px solid black;
+    cursor:pointer;
+    border-radius: 5px;
+    margin:2px;
+    width:100px;
+    height:100px;
+    background: white;
+    display:grid;
+    place-items: center;
+    font-size: 3em;
+}
+#display-winner{
+    background: white;
+    width:500px;
+    height:200px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    display:none;
+}
+.result{
+    text-align: center;
+    width:100%;
+    padding:10 0px;
+    font-size: 2em;
+}
+.result span{
+    color:red;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+#display-winner button{
+    margin-top: 10px;
+width:100px;
+height:40px;
+color:white;
+background-color: black;
+transition: 0.2s ease-in;
+font-size: 1em;
+}
+#display-winner button:hover{
+    background: white;
+    color: black;
+}

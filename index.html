@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div id="start-box">
+        <h1>Tic-Tac-Toe Game!</h1>
+        <div class="input-box">
+            <label for="player1">Player1 (X):</label>
+            <input type="text" id="player1" placeholder="Enter Player1 Name">
+        </div>
+        <div class="input-box">
+            <label for="player2">Player2 (O):</label>
+            <input type="text" id="player2" placeholder="Enter Player2 Name">
+        </div>
+        <div class="submit-box" onclick="fun()">
+            <button>Start</button>
+        </div>
+    </div>
+    <!-----Gameeeeeeee---------------->
+    <div id="game-box">
+        <div class="players">
+            <div class="display-player1 active" id="display-player1">
+                Player 1(X)
+            </div>
+            <div class="display-player2" id="display-player2">
+                Player 2(O)
+            </div>
+        </div>
+        <div class="grid">
+            <div class="row1">
+                <div class="cell1 cell" id="1"></div>
+                <div class="cell2 cell" id="2"></div>
+                <div class="cell3 cell" id="3"></div>
+            </div>
+            <div class="row2">
+                <div class="cell4 cell" id="4"></div>
+                <div class="cell5 cell" id="5"></div>
+                <div class="cell6 cell" id="6"></div>
+            </div>
+            <div class="row3">
+                <div class="cell7 cell" id="7"></div>
+                <div class="cell8 cell" id="8"></div>
+                <div class="cell9 cell" id="9"></div>
+            </div>
+        </div>
+    </div>
+   <!---------------Result---------------->
+   <div id="display-winner">
+    <div class="result">
+        <span id="winner-name">Praneeth</span> Wins!!
+    </div>
+    <h1>Congratulations</h1>
+    <button id="new-game-button">New Game</button>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
