@@ -39,6 +39,10 @@ To play the game, open the `index.html` file in a web browser. The game interfac
 - Ability to start a new game without refreshing the page.
 
 ## Screenshots
+![image](https://github.com/Praneeth2862/Tic-Tac-Toe-Game/assets/95529324/2b2f7aee-cf4e-49be-9560-a798bfadf0e3)
+![image](https://github.com/Praneeth2862/Tic-Tac-Toe-Game/assets/95529324/1b732e45-4cc8-4ac9-834d-4785275ee3c7)
+![image](https://github.com/Praneeth2862/Tic-Tac-Toe-Game/assets/95529324/694f0567-8124-4097-9325-5a66f699dc9b)
+![image](https://github.com/Praneeth2862/Tic-Tac-Toe-Game/assets/95529324/1c5048ae-1922-4fb2-a850-0c4b1653b678)
 
 
 ## Credits
