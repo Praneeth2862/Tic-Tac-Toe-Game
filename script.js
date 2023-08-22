@@ -11,9 +11,13 @@ if (player2==""){
 }
 document.querySelector('.display-player1').innerHTML=player1;
 document.querySelector('.display-player2').innerHTML=player2;
-let newGameButton = document.querySelector("#new-game-button");
-newGameButton.addEventListener("click", () => {
-   location.reload();
+let newGameButtons = document.querySelectorAll('.new-game-button');
+
+newGameButtons.forEach(newGameButton => {
+    newGameButton.addEventListener("click", () => {
+        location.reload();
+     });
+    
 });
 
 let currentPlayer='X';
@@ -39,7 +43,7 @@ options=["","","","","","","","",""];
     [2,5,8],
     [3,6,9],
     [1,5,9],
-    [2,5,7]
+    [3,5,7]
 ];
 let checkWinner=()=>{
     for(let i=0;i<winOptions.length;i++) {
@@ -51,11 +55,25 @@ let checkWinner=()=>{
         }
     };
 }
+
+let checkDraw = () => {
+    for (let i = 1; i <= 9; i++) {
+        if (options[i] !== 'X' && options[i] !== 'O') {
+            return false; 
+        }
+    }
+    return true;
+};
+
 let displayWinner=(value)=>{
     let winnername=document.querySelector('#winner-name');
     winnername.innerHTML=(value=="X")?player1:player2;
     document.querySelector('#game-box').style.display='none';
     document.querySelector('#display-winner').style.display='flex';
+}
+let displayDraw=()=>{
+    document.querySelector('#game-box').style.display='none';
+    document.querySelector('#draw-box').style.display='flex';
 }
 cells=document.querySelectorAll('.cell');
 document.querySelector('.display-player1').classList.add('activeX');
@@ -66,6 +84,7 @@ cells.forEach(cell => {
             cell.innerHTML=currentPlayer;
             options[parseInt(cell.getAttribute('id'))]=currentPlayer;
             changePlayer(cell);
+            
             let win=checkWinner();
             if(win=="X")
             {
@@ -74,10 +93,12 @@ cells.forEach(cell => {
              if(win=="O"){
                 displayWinner("Y");
             }
+            if(checkDraw()){
+                displayDraw();
+            }
             
         }
     })
 });
-
 }
 
