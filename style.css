@@ -143,7 +143,7 @@ body{
     place-items: center;
     font-size: 3em;
 }
-#display-winner{
+.display-result{
     background: white;
     width:500px;
     height:200px;
@@ -153,6 +153,8 @@ body{
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
+}
+#display-winner{
     display:none;
 }
 .result{
@@ -166,7 +168,7 @@ body{
     font-family: sans-serif;
     font-weight: bolder;
 }
-#display-winner button{
+.display-result button{
     margin-top: 10px;
 width:100px;
 height:40px;
@@ -175,7 +177,10 @@ background-color: black;
 transition: 0.2s ease-in;
 font-size: 1em;
 }
-#display-winner button:hover{
+.display-result button:hover{
     background: white;
     color: black;
+}
+#draw-box{
+    display:none;
 }
